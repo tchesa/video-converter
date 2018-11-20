@@ -1,8 +1,11 @@
+'use strict'
+
 import React from 'react'
 import ReactDOM from 'react-dom'
+import App from './app'
 
 ReactDOM.render(
-  <h1>Video converter</h1>,
+  <App />,
   document.querySelector('[data-js="app"]')
 )
 

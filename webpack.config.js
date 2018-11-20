@@ -5,7 +5,7 @@ const port = 8080
 
 module.exports = {
   mode: 'development',
-  devtool: 'source-map',
+  // devtool: 'source-map',
   entry: [
     path.join(__dirname, 'src', 'index')
   ],
