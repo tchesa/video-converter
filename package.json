@@ -33,7 +33,8 @@
   },
   "dependencies": {
     "react": "^16.5.2",
-    "react-dom": "^16.5.2"
+    "react-dom": "^16.5.2",
+    "react-dropzone": "^7.0.1"
   },
   "homepage": "https://github.com/tchesa/video-converter#readme"
 }

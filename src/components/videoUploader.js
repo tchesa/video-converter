@@ -1,5 +1,7 @@
 
 import React from 'react'
+import Dropzone from 'react-dropzone'
+import List from './videoList'
 // import PropTypes from 'prop-types'
 
 // import Search from './search'
@@ -7,9 +9,36 @@ import React from 'react'
 // import Actions from './actions'
 // import Repos from './repos'
 
-const videoUploader = () => (
-  <a className='video-uploader'>Clique ou arraste o arquivo de vídeo</a>
-)
+class Uploader extends React.Component {
+  constructor () {
+    super()
+    this.state = {
+      files: []
+    }
+  }
+
+  onDrop (files) {
+    // gerando uma chave única para cada arquivo
+    files.map((item, index) => {
+      item.key = this.state.files.length + index
+      return item
+    })
+    this.setState({
+      files: this.state.files.concat(files)
+    })
+  }
+
+  render () {
+    return (
+      <div className='video-uploader'>
+        <Dropzone accept='video/*' onDrop={this.onDrop.bind(this)}>
+          <p>Arraste o video aqui</p>
+        </Dropzone>
+        <List items={this.state.files} />
+      </div>
+    )
+  }
+}
 
 // videoUploader.propTypes = {
 //   userinfo: PropTypes.object,
@@ -17,4 +46,4 @@ const videoUploader = () => (
 //   starred: PropTypes.array.isRequired
 // }
 
-export default videoUploader
+export default Uploader
