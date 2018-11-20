@@ -1,9 +1,11 @@
 
 const express = require('express');
 const app = express();
+const morgan = require('morgan');
 
 const encoderRoutes = require('./api/routes/encoder');
 
-app.use('/encode', encoderRoutes)
+app.use(morgan('dev'));
+app.use('/encode', encoderRoutes);
 
 module.exports = app;
