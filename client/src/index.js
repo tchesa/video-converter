@@ -1,0 +1,12 @@
+'use strict'
+
+import React from 'react'
+import ReactDOM from 'react-dom'
+import App from './app'
+
+ReactDOM.render(
+  <App />,
+  document.querySelector('[data-js="app"]')
+)
+
+module.hot.accept()
