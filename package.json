@@ -33,6 +33,7 @@
   },
   "dependencies": {
     "css-loader": "^1.0.1",
+    "express": "^4.16.4",
     "node-sass": "^4.10.0",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
