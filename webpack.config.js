@@ -35,6 +35,20 @@ module.exports = {
       exclude: /node_modules/,
       include: /src/,
       loader: 'babel-loader'
+    },
+    { // sass
+      test: /\.(s?[ac]ss|css)$/,
+      use: [
+        {
+          loader: 'style-loader'
+          // loader: MiniCSSExtractPlugin.loader,
+          // options: {
+          //   publicPath: '/',
+          // },
+        },
+        { loader: 'css-loader' },
+        { loader: 'sass-loader' }
+      ]
     }]
   }
 }

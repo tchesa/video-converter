@@ -3,6 +3,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './app'
+require('./main.scss')
 
 ReactDOM.render(
   <App />,

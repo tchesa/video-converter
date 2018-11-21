@@ -18,15 +18,17 @@ const List = ({ items }) => (
     </thead>
     <tbody>
       {
-        items.map(i => {
-          return (
-            <tr key={i.key}>
-              <td>#{i.key} {i.name}</td>
-              <td>{i.size} bytes</td>
-              <td><i>state</i></td>
-            </tr>
-          )
-        })
+        (items.length > 0) ? (
+          items.map(i => {
+            return (
+              <tr key={i.key}>
+                <td>#{i.key} {i.name}</td>
+                <td>{i.size} bytes</td>
+                <td className='sending'>Enviando</td>
+              </tr>
+            )
+          })
+        ) : (<tr><td colSpan={3} className='no-items'>Nenhum vídeo enviado</td></tr>)
       }
     </tbody>
   </table>

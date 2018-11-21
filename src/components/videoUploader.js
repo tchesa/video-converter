@@ -31,7 +31,7 @@ class Uploader extends React.Component {
   render () {
     return (
       <div className='video-uploader'>
-        <Dropzone accept='video/*' onDrop={this.onDrop.bind(this)}>
+        <Dropzone className='dropzone' acceptClassName='accept' rejectClassName='reject' accept='video/*' onDrop={this.onDrop.bind(this)}>
           <p>Arraste o video aqui</p>
         </Dropzone>
         <List items={this.state.files} />
